@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 
-function model(sequelize) {
+function UserModel(sequelize) {
   const attributes = {
     email: { type: DataTypes.STRING, allowNull: false },
     passwordHash: { type: DataTypes.STRING, allowNull: false },
@@ -24,4 +24,4 @@ function model(sequelize) {
   return sequelize.define("User", attributes, options);
 }
 
-module.exports = model;
+module.exports = UserModel;
